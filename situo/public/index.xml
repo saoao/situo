@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>司拓的博客</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 司拓的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>situo</copyright>
+    <lastBuildDate>Wed, 30 Aug 2017 15:43:48 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;程序员&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/saoao&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>This is a very long title This is a very long title This is a very long title This is a very long title This is a very long title</title>
+      <link>http://localhost:1313/post/this-is-a-very-long-title/</link>
+      <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/this-is-a-very-long-title/</guid>
+      
+        <description>&lt;p&gt;This is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long title&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>&lt;p&gt;QTableWidget自动适应列宽和行高：
+ui-&amp;gt;TableWidget-&amp;gt;horizontalHeader()-&amp;gt;setSectionResizeMode(QHeaderView::Stretch);&lt;/p&gt;
+&lt;p&gt;用setStyleSheet设置菜单样式注意点:
+菜单-菜单的项-子菜单-子菜单的项-孙菜单-孙菜单的项&amp;hellip;分别设置样式
+伪状态：
+:checked    button部件被选中
+:disabled    部件被禁用
+:enabled    部件被启用
+:focus    部件获得焦点
+:hover    鼠标位于部件上
+:indeterminate    checkbox或radiobutton被部分选中
+:off    部件可以切换，且处于off状态
+:on    部件可以切换，且处于on状态
+:pressed    部件被鼠标按下
+:unchecked    button部件未被选中
+:selected&lt;/p&gt;
+&lt;p&gt;子部件 
+::down-arrow    combo box或spin box的下拉箭头
+::down-button    spin box的向下按钮
+::drop-down    combo box的下拉箭头
+::indicator    checkbox、radio button或可选择group box的指示器
+::item    menu、menu bar或status bar的子项目
+::menu-indicator    push button的菜单指示器
+::title    group box的标题
+::up-arrow    spin box的向上箭头
+::up-button    spin box的向上按钮&lt;/p&gt;
+&lt;p&gt;设置菜单：
+在MainWindow项目引导完成后生一个默认的菜单条，用函数setMenuBar(QMenuBar * menuBar)，则默认的被覆盖，一个MainWindow只能有一个主菜单处于最上方; 用函数  setMenuWidget(QWidget * menuBar)，覆盖默认菜单，用一个自定义的部件代替菜单。&lt;/p&gt;
+&lt;p&gt;Qt Desigener布局快捷键：
+水平布局：ctrl+1;
+垂直布局：ctrl+2;
+网格布局：ctrl+5;
+表单布局：ctrl+6;
+水平分割：ctrl+3;
+垂直分割：ctrl+4;
+打破布局：ctrl+0;
+调整大小：ctrl+j;&lt;/p&gt;
+&lt;p&gt;如果只要float转化成的数值，则使用如下：
+loat num = 1.222; 
+QString data = QString(“%1”).arg(num);&lt;/p&gt;
+&lt;p&gt;Qt安装注意事项：
+出坑指南：https://blog.csdn.net/qq_34192966/article/details/78710580&lt;/p&gt;
+&lt;p&gt;查看端口被哪个应用占用：
+netstat -ano  //查看需要查询的端口
+netstat -ano|findstr &amp;ldquo;端口名&amp;rdquo; //查看特定端口的PID
+tasklist|finderstr &amp;ldquo;任务PID&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;显示协议统计信息和当前 TCP/IP 网络连接。&lt;/p&gt;
+&lt;p&gt;NETSTAT [-a] [-b] [-e] [-f] [-n] [-o] [-p proto] [-r] [-s] [-x] [-t] [interval]&lt;/p&gt;
+&lt;p&gt;netstat
+-a            显示所有连接和侦听端口。
+-b            显示在创建每个连接或侦听端口时涉及的
+可执行程序。在某些情况下，已知可执行程序承载
+多个独立的组件，这些情况下，
+显示创建连接或侦听端口时
+涉及的组件序列。在此情况下，可执行程序的
+名称位于底部 [] 中，它调用的组件位于顶部，
+直至达到 TCP/IP。注意，此选项
+可能很耗时，并且在你没有足够
+权限时可能失败。
+-e            显示以太网统计信息。此选项可以与 -s 选项
+结合使用。
+-f            显示外部地址的完全限定
+域名(FQDN)。
+-n            以数字形式显示地址和端口号。
+-o            显示拥有的与每个连接关联的进程 ID。
+-p proto      显示 proto 指定的协议的连接；proto
+可以是下列任何一个: TCP、UDP、TCPv6 或 UDPv6。如果与 -s
+选项一起用来显示每个协议的统计信息，proto 可以是下列任何一个:
+IP、IPv6、ICMP、ICMPv6、TCP、TCPv6、UDP 或 UDPv6。
+-q            显示所有连接、侦听端口和绑定的
+非侦听 TCP 端口。绑定的非侦听端口
+不一定与活动连接相关联。
+-r            显示路由表。
+-s            显示每个协议的统计信息。默认情况下，
+显示 IP、IPv6、ICMP、ICMPv6、TCP、TCPv6、UDP 和 UDPv6 的统计信息;
+-p 选项可用于指定默认的子网。
+-t            显示当前连接卸载状态。
+-x            显示 NetworkDirect 连接、侦听器和共享
+终结点。
+-y            显示所有连接的 TCP 连接模板。
+无法与其他选项结合使用。
+interval      重新显示选定的统计信息，各个显示间暂停的
+间隔秒数。按 CTRL+C 停止重新显示
+统计信息。如果省略，则 netstat 将打印当前的
+配置信息一次。&lt;/p&gt;
+&lt;p&gt;mysql安装出坑：
+使用专门的安装器安装，本地测试时需要勾选防火墙例外
+使用Navicat管理数据库时，账户认证方式需要选择标准认证方式，选择caching_sha2_password将会出错。
+要在Navicat管理数据库，须在MySQLWorkbench中设置管理员权限&lt;/p&gt;
+&lt;p&gt;解决qt中文乱码：
+#pragma execution_character_set(&amp;ldquo;utf-8&amp;rdquo;)&lt;/p&gt;
+&lt;p&gt;线程：
+1、自定义一个线程类，继承于Object
+2、类中设置一个线程函数（有且仅有一个线程函数）
+3、创建自定义线程类对象（不能指定父对象）
+4、创建QThread子线程对象
+5、把自定义线程类加入到子线程
+a)用start只是开启线程，没有启动线程函数
+b线程函数的启动必须通过信号和槽。&lt;/p&gt;
+&lt;p&gt;QChart:
+Qt中不要直接delete一个QObject对象，因为此对象可能还在消息循环中，使用deleteLater()函数来替换。&lt;/p&gt;
+&lt;p&gt;头文件中声明类，结构体，联合体，自由运算符，同时只定义类，结构体，联合体，内联自由运算符，自由运算符函数，内联静态成员函数。
+头文件中如果要定义一个整型常量，最好用类作用域中的一个枚举替换，其他整型常量可以使其成为一个静态成员常量来限定其范围。
+宏不受作用域约束，如果放在头文件中可能与系统中其他任一文件的变量名称冲突，所以宏不应该出现在头文件中，除非它作为一个卫哨。
+外部包含卫哨，可避免出现再收敛包含图，确保同一个头文件最多在编译单元最多被包含两次。
+运行时的错误检查会降低软件性能，用断言替代。
+要使用全局变量时，可以将变量作为私有静态成员放置在类的作用域中，并提供公有的静态成员函数访问，以消除全局变量，但这存在过度依赖。&lt;/p&gt;
+&lt;p&gt;不能在函数指针中使用默认参数&lt;/p&gt;
+&lt;p&gt;qt程序release时，如果出现定义的信号一定要使用，不使用的信号需要删除掉，否则release信号后会产生冲突。&lt;/p&gt;
+&lt;p&gt;Qt信号和槽连接失败原因及解决办法：
+1、槽函数并没有声明在类的public slots（或private slots或protected slots）里，因此，所想要成为槽函数的那个函数只是普普通通成员函数。&lt;/p&gt;
+&lt;p&gt;2、信号和槽之间存在参数传递，但是二者的参数数量或者类型不一致（信号里的参数数量可以多于槽函数里的参数数量，但是二者都有的参数，类型必须对应）；&lt;/p&gt;
+&lt;p&gt;3、信号和槽之间有参数传递，但是使用connect的时候在槽函数或者信号或者二者同时加入了形参，比如下面的两个connect，第一个连接因为有形参，不会连接成功。第二个会连接成功。&lt;/p&gt;
+&lt;p&gt;4、信号和槽之间存在自定义参数传递，但是传递的类型没有注册。什么叫做自定义参数呢？在传递int，double，char，bool，float等类型的时候没问题，但是传递比如QList类，或者自定义的结构体、类等时，连接将会失败。此时会报错：
+解决：此时我们需要注册这种自定义类型（非基本类型），首先包含头文件
+//注册参数类型
+qRegisterMetaType&amp;lt;QList&lt;!-- raw HTML omitted --&gt; &amp;gt; (&amp;ldquo;自定义类型&amp;rdquo;);&lt;/p&gt;
+&lt;p&gt;5、消息被子控件过滤&lt;/p&gt;
+&lt;p&gt;每个QObject实例都有一个叫做“线程关系”(thread affinity)的属性，或者说，它处于某个线程中。
+默认情况下，QObject处于创建它的线程中。
+当QObject接收队列信号(queued signal)或者传来的事件(posted event)，槽函数或事件处理器将在对象所处的线程中执行。
+QObject对象和子对象必须在同一线程中创建&lt;/p&gt;
+&lt;p&gt;/&lt;em&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;&lt;strong&gt;多线程&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/strong&gt;&lt;/em&gt;***/
+继承QThread实现：
+QThread自身并不生存在它run函数所在的线程，而是生存在旧的线程中
+QThread只有run函数是在新线程里的 
+在非run函数里面调用子线程的成员函数，成员函数在调用它的线程中运行。
+QThread在不调用exec()情况下是exit函数和quit函数是没有作用的。quit()在使用moveToThread方法执行多线程时，有作用。
+QThread调用terminate()，线程马上终止（中断）
+继承QThread的函数在运行完run函数后就视为线程完成，会发射finish信号。
+如果线程已经运行，重复调用start()不会进行任何处理，但为了谨慎起见，还是建议在start之前进行isRunning()判断：&lt;/p&gt;
+&lt;p&gt;安全退出线程：
+添加一个bool变量，通过主线程修改这个bool变量来进行终止，但这样有可能引起访问冲突，需要加锁 ；
+程序在退出时要判断各线程是否已经退出，没退出的应该让它终止 。如果不进行判断，很可能程序退出时会崩溃。如果线程的父对象是窗口对象，那么在窗体的析构函数中，还需要调用wait函数等待线程完全结束再进行下面的析构；
+善用QObject::deleteLater 和 QObject::destroyed来进行内存管理 ，由于多线程环境你不可预料下一步是哪个语句执行，因此，加锁和自动删除是很有用的工具，加锁是通过效率换取安全，用Qt的信号槽系统可以更有效的处理这些问题。&lt;/p&gt;
+&lt;p&gt;启动一个线程：
+先确定线程的生命周期。
+1、（全局线程）随UI生命周期一致。线程创建时把窗体作为其父对象，窗体结束自动析构父对象，但是必须让主线程等待子线程结束后才能开始析构，方法是在窗体析构函数中使用wait()来挂起线程；另一个办法是在线程创建时不指定父对象，用deleleLater()自己删除自己。
+2、（局部）临时线程，一般用于处理大计算。为不让Ui卡死，析构方法：在线程创建时不指定父对象，用deleleLater()自己删除自己。&lt;/p&gt;
+&lt;p&gt;继承QObject实现：
+QObject的线程转移函数是：void moveToThread(QThread * targetThread) ，通过此函数可以把一个顶层Object（就是没有父级）转移到一个新的线程里。
+不要直接把一个QThread子类转移到新的线程中，这样run函数和其他成员函数都会处在新线程中。
+Qt多线程的写法最好还是通过QObject来实现，和线程的交互通过信号和槽(实际上其实是通过事件)联系
+优点：默认就支持事件循环
+QThread要支持事件循环需要在QThread::run()中调用QThread::exec()来提供对消息循环的支持，否则那些需要事件循环支持的类都不能正常发送信号，因此如果要使用信号和槽，那就直接使用QObject来实现多线程。
+使用QObject创建多线程的方法如下：
+**写一个继承QObject的类，对需要进行复杂耗时逻辑的入口函数声明为槽函数；
+**此类在旧线程new出来，不能给它设置任何父对象；
+**同时声明一个QThread对象，在官方例子里，QThread并没有new出来，这样在析构时就需要调用QThread::wait()，如果是堆分配的话， 可以通过deleteLater来让线程自杀
+**把obj通过moveToThread方法转移到新线程中，此时object已经是在线程中了
+**把线程的finished信号和object的deleteLater槽连接，这个信号槽必须连接，否则会内存泄漏
+**正常连接其他信号和槽（在连接信号槽之前调用moveToThread，不需要处理connect的第五个参数，否则就显示声明用Qt::QueuedConnection来连接）
+**初始化完后调用&amp;rsquo;QThread::start()&amp;lsquo;来启动线程
+**在逻辑结束后，调用QThread::quit退出线程的事件循环&lt;/p&gt;
+&lt;p&gt;使用QObject来实现多线程比用继承QThread的方法更加灵活，整个类都是在新的线程中，通过信号槽和主线程传递数据&lt;/p&gt;
+&lt;p&gt;槽函数重载：connect(m_smallTuneVgsSbx, static_cast&amp;lt;void(QDoubleSpinBox::*)(const QString &amp;amp;)&amp;gt;(&amp;amp;QDoubleSpinBox::valueChanged), [=](const QString &amp;amp; text) {	
+gSimApp.setSmallTuneVgs(text);&lt;/p&gt;
+&lt;p&gt;QTextStream清空文件的方法 ：if (!fileNetListSave.open(QIODevice::WriteOnly | QFile::Truncate)) {}&lt;/p&gt;
+&lt;p&gt;取消对话框右上角的问号：
+Qt::WindowFlags flags = this-&amp;gt;windowFlags();
+setWindowFlags(flags&amp;amp;~Qt::WindowContextHelpButtonHint);&lt;/p&gt;
+&lt;p&gt;Qt在vs中配置qt版本时版本名称必须与实际的bin路径名称相同。例如：msvc2015_64&lt;/p&gt;
+&lt;p&gt;Qt多次链接connect函数的信号槽会调用多次问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;发送一次信号，调用多次槽函数问题
+在同一个类中，多次链接QObject::connect(sender, SIGNAL(signalSender(QString, int)), receiver, SLOT(onSignalSender(QString, int))); 会导致发送一次信号signalSender(QString, int) 多次调用槽函数(onSignalSender(QString, int)，如果链接了一次，那么，发送一次signalSender信号，就调用一次onSignalSender槽函数，如果链接了两次，那么发送一次signalSender信号，就调用两次onSignalSender槽函数，。。。以此类推。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信号的直接调用问题
+在Qt中，一般发送信号都是通过 emit signalSender() 方式发送的，其实也可以通过直接调用信号 ?signalSender()进行发送，此时，如果调用了信号signalSender，且该信号通过connect进行了链接，则会进入对用链接的槽函数中执行。 注意：在多线程中，直接调用是在调用者线程中执行，发信号是在接收者线程中执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Qt信号槽给出了五种连接方式：
+Qt::AutoConnection：信号槽在同一线程，同Qt::DirectConnection.不在同一线程，同Qt::QueuedConnection.
+Qt::DirectConnection： 发射完信号后立即执行槽，只有槽函数执行完成返回后，发射信号后面的代码才可以执行
+Qt::QueuedConnection： 接收部件所在的线程的事件循环返回后再执行槽，无论槽执行与否，发射信号处后面的代码都会立即执行。内部通过postEvent实现的，槽函数永远在槽函数对象所在线程中执行。如果信号参数
+是引用类型的，则会另外复制一份。是线程安全的。
+Qt::UniqueConnection：防止重复连接。如果信号和槽已经连接过了，就不再连接了。&lt;/p&gt;
+&lt;p&gt;qt http post和get的区别：
+get用于请求获取数据，post向指定的资源创建修改数据
+get把参数包含在URL中（长度有限制），POST通过请求实体传递参数（安全）
+&lt;a href=&#34;https://blog.csdn.net/qq_28171461/article/details/81070999&#34;&gt;https://blog.csdn.net/qq_28171461/article/details/81070999&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;get把请求的数据放在url上，即HTTP协议头上，其格式为：以?分割URL和传输数据，参数之间以&amp;amp;相连。数据如果是英文字母/数字，原样发送，
+如果是空格，转换为+，如果是中文/其他字符，则直接把字符串用BASE64加密，及“%”加上“字符串的16进制ASCII码”
+post把数据放在HTTP的包体内（requrest body）。
+get提交的数据最大是2k。
+post理论上没有限制。实际上IIS4中最大量为80KB，IIS5中为100KB。
+GET产生一个TCP数据包，浏览器会把http header和data一并发送出去，服务器响应200(返回数据);
+POST产生两个TCP数据包，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok(返回数据)。
+GET在浏览器回退时是无害的，POST会再次提交请求。&lt;/p&gt;
+&lt;p&gt;GET产生的URL地址可以被Bookmark，而POST不可以。
+GET请求会被浏览器主动cache，而POST不会，除非手动设置。
+GET请求只能进行url编码，而POST支持多种编码方式。
+GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。
+GET只接受ASCII字符的参数的数据类型，而POST没有限制
+get效率高！&lt;/p&gt;
+&lt;p&gt;四种常见的POST提交数据方式
+application/x-www-form-urlencoded （默认）
+multipart/form-data
+application/json
+text/xml&lt;/p&gt;
+&lt;p&gt;application/x-www-form-urlencoded
+很多时候，我们用 Ajax 提交数据时，也是使用这种方式。例如 JQuery 和 QWrap 的 Ajax，Content-Type 默认值都是「application/x-www-form-urlencoded;charset=utf-8」。&lt;/p&gt;
+&lt;p&gt;multipart/form-data
+主要用于上传文件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u012129607/article/details/78949866&#34;&gt;https://blog.csdn.net/u012129607/article/details/78949866&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;multipart/form-data与application/octet-stream的区别、application/x-www-form-urlencoded：
+multipart/form-data
+1、既可以提交普通键值对，也可以提交(多个)文件键值对。&lt;/p&gt;
+&lt;p&gt;2、HTTP规范中的Content-Type不包含此类型，只能用在POST提交方式下，属于http客户端(浏览器、java httpclient)的扩展&lt;/p&gt;
+&lt;p&gt;3、通常在浏览器表单中，或者http客户端(java httpclient)中使用。&lt;/p&gt;
+&lt;p&gt;页面中，form的enctype是multipart/form-data,提交时，content-type也是multipart/form-data。
+格式：
+POST &lt;a href=&#34;http://www.xx.com/myproject/service1&#34;&gt;http://www.xx.com/myproject/service1&lt;/a&gt;
+Host: 192.168.0.201:8694
+Content-Type: multipart/form-data; boundary=&amp;mdash;-WebKitFormBoundary7MA4YWxkTrZu0gW
+Cache-Control: no-cache
+Postman-Token: c3d85a6c-9849-7e3e-5c89-5b994b335b1d&lt;/p&gt;
+&lt;p&gt;&amp;mdash;-WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name=&amp;ldquo;name1&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;value1
+&amp;mdash;-WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name=&amp;ldquo;name2&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;value2
+&amp;mdash;-WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name=&amp;ldquo;file1&amp;rdquo;; filename=&amp;ldquo;94b5b232gw1ewlx3p595wg20ak0574qq.gif&amp;rdquo;
+Content-Type: image/gif&lt;/p&gt;
+&lt;p&gt;&amp;mdash;-WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name=&amp;ldquo;file2&amp;rdquo;; filename=&amp;ldquo;1443175219259.jpg&amp;rdquo;
+Content-Type: image/jpeg&lt;/p&gt;
+&lt;p&gt;application/octet-stream&lt;/p&gt;
+&lt;p&gt;1、只能提交二进制，而且只能提交一个二进制，如果提交文件的话，只能提交一个文件,后台接收参数只能有一个，而且只能是流（或者字节数组）&lt;/p&gt;
+&lt;p&gt;2、属于HTTP规范中Content-Type的一种&lt;/p&gt;
+&lt;p&gt;3、很少使用&lt;/p&gt;
+&lt;p&gt;application/x-www-form-urlencoded&lt;/p&gt;
+&lt;p&gt;1、不属于http content-type规范，通常用于浏览器表单提交，数据组织格式:name1=value1&amp;amp;name2=value2,post时会放入http body，get时，显示在在地址栏。&lt;/p&gt;
+&lt;p&gt;2、所有键与值，都会被urlencoded，请查看urlencoder
+格式：
+POST &lt;a href=&#34;http://www.xx.com/myproject/service&#34;&gt;http://www.xx.com/myproject/service&lt;/a&gt; HTTP/1.1
+Host: 192.168.0.201:8694
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: f5f6240c-08d3-8695-9473-607038f71eaa&lt;/p&gt;
+&lt;p&gt;name11=file1&amp;amp;name2=value2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://tool.oschina.net/&#34;&gt;http://tool.oschina.net/&lt;/a&gt; 一款在线工具&lt;/p&gt;
+&lt;p&gt;dir *.lib /w &amp;gt; F:\VTK\vtk-libs.txt  批量生成库名称&lt;/p&gt;
+&lt;p&gt;//log4qt日志管理系统配置&lt;/p&gt;
+&lt;p&gt;log4j.logger.HpcLog=DEBUG,HpcLog,File
+log4j.appender.HpcLog=org.apache.log4j.FileAppender
+log4j.appender.HpcLog=org.apache.log4j.RollingFileAppender
+log4j.appender.HpcLog.File=logs/comm/hpc/hpclog.log
+log4j.appender.HpcLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.HpcLog.layout.ConversionPattern=[%c][%p][%t] %d{yyyy-MM-dd_HH:mm:ss} - %m%n&lt;/p&gt;
+&lt;p&gt;log4j.logger.Qt=DEBUG,Qt,File
+log4j.appender.Qt=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.Qt.File=logs/debug/debuglog.log
+log4j.appender.Qt.layout=org.apache.log4j.PatternLayout
+log4j.appender.Qt.layout.ConversionPattern=[%c][%p][%t] %d{yyyy-MM-dd_HH:mm:ss}	- %m%n&lt;/p&gt;
+&lt;p&gt;//
+log4j.rootLogger=debug,File
+log4j.appender.File=org.apache.log4j.FileAppender
+log4j.appender.File=org.apache.log4j.RollingFileAppender
+log4j.appender.File.File=logs/system/systemLog.log
+log4j.appender.File.MaxFileSize=3072KB
+log4j.appender.File.AppendFile=false
+log4j.appender.File.layout=org.apache.log4j.PatternLayout
+log4j.appender.File.layout.ConversionPattern=%-d{yyyy-MM-dd HH:mm:ss} [%p %c] %m%n&lt;/p&gt;
+&lt;p&gt;通讯zeromq：
+at least once 是指同一个消息会被传输 1 到 n 次,将消息持久化到磁盘中以保证即便进程崩溃消息依旧能够送达。
+at most once：同一个消息会被传输 0 到 1 次，消息送出后就不理会。
+网络拓扑下的 heart beat一般是at most once 机制。
+back pressure：压力回溯，因为任意生产者和消费者间，会存在处理速度不一致的问题，压力回溯能使生产者停止产生更多的内容。&lt;/p&gt;
+&lt;p&gt;套接字生命周期：
+创建和销毁套接字：zmq_socket(), zmq_close()
+配置和读取套接字选项：zmq_setsockopt(), zmq_getsockopt()
+为套接字建立连接：zmq_bind(), zmq_connect()
+发送和接收消息：zmq_send(), zmq_recv()&lt;/p&gt;
+&lt;p&gt;套接字永远是空指针类型的，而消息则是一个数据结构
+在连接两个节点时，其中一个需要使用zmq_bind()，另一个则使用zmq_connect()，即：绑定套接字至端点；连接套接字至端点，端点指的是某个广为周知网络地址。用zmq_bind()连接的节点称之为服务端，它有着一个较为固定的网络地址；使用zmq_connect()连接的节点称为客户端，其地址不固定。&lt;/p&gt;
+&lt;p&gt;与传统的TCP连接的区别：
+当客户端使用zmq_connect()时连接就已经建立了，并不要求该端点已有某个服务使用zmq_bind()进行了绑定；
+连接是异步的，并由一组消息队列做缓冲；
+连接会表现出某种消息模式，这是由创建连接的套接字类型决定的；
+一个套接字可以有多个输入和输出连接；
+当套接字绑定至端点时它就自动开始接受连接。
+应用程序无法直接和这些连接打交道，因为它们是被封装在ZMQ底层的。
+当客户端使用zmq_connect()连接至某个端点时，它就已经能够使用该套接字发送消息了。如果这时，服务端启动起来了，并使用zmq_bind()绑定至该端点，ZMQ将自动开始转发消息。
+使用多种协议，inproc（进程内）、ipc（进程间）、tcp、pgm（广播）、epgm。
+服务端节点可以仅使用一个套接字就能绑定至多个端点（使用zmq_bind()）：
+例如：
+zmq_bind (socket, &amp;ldquo;tcp://&lt;em&gt;:5555&amp;rdquo;);
+zmq_bind (socket, &amp;ldquo;tcp://&lt;/em&gt;:9999&amp;rdquo;);
+zmq_bind (socket, &amp;ldquo;ipc://myserver.ipc&amp;rdquo;);
+不允许多次绑定至同一端点。
+客户端节点也可以使用一个套接字同时建立多个连接。
+服务端是稳定的，客户端是灵活的。
+**
+TCP套接字和ZMQ套接字之间在传输数据方面的区别：
+ZMQ套接字传输的是消息，而不是字节（TCP）或帧（UDP）。消息指的是一段指定长度的二进制数据块。
+ZMQ套接字在后台进行I/O操作，也就是说无论是接收还是发送消息，它都会先传送到一个本地的缓冲队列，这个内存队列的大小是可以配置的。
+ZMQ套接字可以和多个套接字进行连接（如果套接字类型允许的话）。TCP协议只能进行点对点的连接。
+ZMQ套接字可以发送消息给多个端点（扇出模型），或从多个端点中接收消息（扇入模型）。
+**&lt;/p&gt;
+&lt;p&gt;调用zmq_send()方法时其实并没有真正将消息发送给套接字连接。消息会在一个内存队列中保存下来，并由后台的I/O线程异步地进行发送。如果不出意外情况，这一行为是非阻塞的。所以说，即便zmq_send()有返回值，并不能代表消息已经发送。当你在用zmq_msg_init_data()初始化消息后，你不能重用或是释放这条消息，否则ZMQ的I/O线程会认为它在传输垃圾数据。&lt;/p&gt;
+&lt;p&gt;ZMQ的核心消息模式：
+请求-应答模式：将一组服务端和一组客户端相连，用于远程过程调用或任务分发。
+发布-订阅模式 ：将一组发布者和一组订阅者相连，用于数据分发。
+管道模式：使用扇入或扇出的形式组装多个节点，可以产生多个步骤或循环，用于构建并行处理架构。
+合法的套接字连接-绑定对：
+PUB - SUB
+REQ - REP
+REQ - ROUTER
+DEALER - REP
+DEALER - ROUTER
+DEALER - DEALER
+ROUTER - ROUTER
+PUSH - PULL
+PAIR - PAIR&lt;/p&gt;
+&lt;p&gt;ZMQ的传输单位是消息，即一个二进制块。可以使用任意的序列化工具，如谷歌的Protocal Buffers、XDR、JSON等。
+ZMQ的消息是作为一个整体来收发的，你不会只收到消息的一部分；
+ZMQ不会立即发送消息，而是有一定的延迟；
+你可以发送0字节长度的消息，作为一种信号；
+必须使用zmq_msg_close()函数来关闭消息，但在一些会在变量超出作用域时自动释放消息对象的语言中除外。&lt;/p&gt;
+&lt;p&gt;处理多个套接字：
+正确的方法应该是使用zmq_poll()函数。更好的方法是将zmq_poll()包装成一个框架，编写一个事件驱动的反应器。&lt;/p&gt;
+&lt;p&gt;C++ / QT 对象序列化(Object Serialization)的实现：
+&lt;a href=&#34;http://www.voidcn.com/article/p-mdeqcvul-bpt.html&#34;&gt;http://www.voidcn.com/article/p-mdeqcvul-bpt.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Protocol Buffers：
+编译指令：protoc -I=$SRC_DIR &amp;ndash;cpp_out=$DST_DIR $SRC_DIR/addressbook.proto&lt;/p&gt;
+&lt;p&gt;无法解析的外部符号 &amp;ldquo;class google::protobuf::internal::ExplicitlyConstructed：
+在生成的.pb.h头文件中添加#define PROTOBUF_USE_DLLS
+大数据处理框架：
+Hadoop, Mapreduce, Hive, Storm, Spark, Druid, kafka, hbase, canal，ES在生成的.pb.h头文件中添加#define PROTOBUF_USE_DLLS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/lengyuezuixue/togedc/sgtc02&#34;&gt;https://www.yuque.com/lengyuezuixue/togedc/sgtc02&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在多线程中使用QTimer：
+每个QObject实例都有一个叫做“线程关系”(thread affinity)的属性，或者说，它处于某个线程中。
+默认情况下，QObject处于创建它的线程中。
+当QObject接收队列信号(queued signal)或者传来的事件(posted event)，槽函数或事件处理器将在对象所处的线程中执行。
+根据以上的原理，Qt使用计时器的线程关系(thread affinity)来决定由哪个线程发出timeout()信号。正因如此，你必须在它所处的线程中start或stop该定时器，在其它线程中启动定时器是不可能的。
+m_pData-&amp;gt;m_updateCalcNodeInfoThread = new QThread();
+m_pData-&amp;gt;m_requestCalcInfoTimer = new QTimer();
+m_pData-&amp;gt;m_requestCalcInfoTimer-&amp;gt;setInterval(5000);
+m_pData-&amp;gt;m_requestCalcInfoTimer-&amp;gt;moveToThread(m_pData-&amp;gt;m_updateCalcNodeInfoThread);
+connect(m_pData-&amp;gt;m_updateCalcNodeInfoThread, SIGNAL(started()), m_pData-&amp;gt;m_requestCalcInfoTimer, SLOT(start()));
+connect(m_pData-&amp;gt;m_updateCalcNodeInfoThread, SIGNAL(finished()), m_pData-&amp;gt;m_requestCalcInfoTimer, SLOT(stop()));
+connect(m_pData-&amp;gt;m_requestCalcInfoTimer, SIGNAL(timeout()), this, SLOT(refreshCalcNodeInfoTreeView()), Qt::DirectConnection);&lt;/p&gt;
+&lt;p&gt;写共享内存：
+QByteArray packed;
+MsgPackStream stream(&amp;amp;packed, QIODevice::WriteOnly);
+stream &amp;laquo; sAddress.simExperimentAddress.port
+&amp;laquo; sAddress.excuteEngineAddress.port
+&amp;laquo; sAddress.runAdsAddress.port
+&amp;laquo; sAddress.dataFilterAddress.port;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (packed.isEmpty()) {
+    SERVER_LOG_ERROR(QStringLiteral(&amp;quot;MsgPack压包失败！&amp;quot;));
+    return false;
+}
+if (!gSimApp.getSimulationHandler()-&amp;gt;loadTcpAddressInfoToSharedMemory(packed)) {
+    SERVER_LOG_ERROR(QStringLiteral(&amp;quot;加载Tcp地址到共享内存失败！&amp;quot;));
+    return false;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;bool SimulationHandler::loadTcpAddressInfoToSharedMemory(const QByteArray&amp;amp; byteArray)
+{
+if (m_pData-&amp;gt;m_sharememory.isAttached())
+{
+if (!m_pData-&amp;gt;m_sharememory.detach())
+{
+LOG_DEBUG(QStringLiteral(&amp;ldquo;不能将该进程与共享内存段分离！&amp;quot;));
+return false;
+}
+}
+int size = byteArray.size();
+// 创建共享内存段
+if (!m_pData-&amp;gt;m_sharememory.create(size))
+{
+LOG_DEBUG(QStringLiteral(&amp;ldquo;不能创建共享内存：原因：%1！&amp;quot;).arg(m_pData-&amp;gt;m_sharememory.errorString()));
+return false;
+}
+m_pData-&amp;gt;m_sharememory.lock();
+char &lt;em&gt;to = static_cast&amp;lt;char&lt;/em&gt;&amp;gt;(m_pData-&amp;gt;m_sharememory.data());
+const char *from = byteArray.data();
+memcpy(to, from, qMin(m_pData-&amp;gt;m_sharememory.size(), size));
+m_pData-&amp;gt;m_sharememory.unlock();
+SERVER_LOG_INFO(QStringLiteral(&amp;ldquo;共享内存段中的数据内容：%1&amp;rdquo;).arg(QString::fromUtf8(byteArray)));
+return true;
+}&lt;/p&gt;
+&lt;p&gt;读共享内存：
+QSharedMemory sharedMemory;
+//sharedMemory.setKey(&amp;ldquo;LMS_EXPERIMENT&amp;rdquo;);
+sharedMemory.setKey(&amp;ldquo;LMS_LOCAL_SERVER&amp;rdquo;);
+// 将共享内存与该进程绑定
+if (!sharedMemory.attach())
+{
+MQ_LOG_ERROR(QStringLiteral(&amp;ldquo;不能将该进程与共享内存段绑定！&amp;quot;));
+return false;
+}
+QBuffer buffer;
+sharedMemory.lock();
+buffer.setData((char*)sharedMemory.constData(), sharedMemory.size());
+buffer.open(QBuffer::ReadOnly);
+sharedMemory.unlock();
+sharedMemory.detach();
+MQ_LOG_INFO(QStringLiteral(&amp;ldquo;共享内存段中的数据内容：%1&amp;rdquo;).arg(QString::fromUtf8(buffer.data())));
+QByteArray byteArray = buffer.data();
+MsgPackStream stream(byteArray);
+stream &amp;raquo; sAddress.simExperimentAddress.port
+&amp;raquo; sAddress.excuteEngineAddress.port
+&amp;raquo; sAddress.runAdsAddress.port
+&amp;raquo; sAddress.dataFilterAddress.port;&lt;/p&gt;
+&lt;p&gt;pv操作：
+P操作的主要动作是：（P表示通过，V表示释放）
+①S减1；
+②若S减1后仍大于或等于0，则进程继续执行；
+③若S减1后小于0，则该进程被阻塞后放入等待该信号量的等待队列中，然后转进程调度。
+V操作的主要动作是： 
+①S加1；
+②若相加后结果大于0，则进程继续执行；
+③若相加后结果小于或等于0，则从该信号的等待队列中释放一个等待进程，然后再返回原进程继续执行或转进程调度。
+&lt;a href=&#34;https://stackoverflow.com/questions/46733421/kill-a-qprocess-running-in-a-different-qthread&#34;&gt;https://stackoverflow.com/questions/46733421/kill-a-qprocess-running-in-a-different-qthread&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;线程同步：
+信号量（QSemaphore）用于管理多个具有相同性质的资源。一个互斥体（QMutex）只能管理一个资源。
+信号量是互斥量的泛化。虽然互斥锁只能被锁定一次，但是可以获得一个信号量多次。信号量通常用于保护一定数量的相同资源。&lt;/p&gt;
+&lt;p&gt;QtTest:
+程序名  -xml -vs -lightxml -o testres.txt&lt;/p&gt;
+&lt;p&gt;注册帮助文档：qhelpgenerator qtpropertybrowser.qhp -o qtpropertybrowser.qch
+assistant -register qtpropertybrowser.qch&lt;/p&gt;
+&lt;p&gt;更改qmdiarea tab样式：
+QList&amp;lt;QTabBar &lt;em&gt;&amp;gt; tabBarList = d-&amp;gt;m_mdiArea-&amp;gt;findChildren&amp;lt;QTabBar&lt;/em&gt;&amp;gt;();
+if (tabBarList.size() &amp;gt; 0) {
+QTabBar *tabBar = tabBarList[0];
+if (tabBar)
+{
+tabBar-&amp;gt;setExpanding(false);
+}
+}&lt;/p&gt;
+&lt;p&gt;FLANN 使用方法：
+int knn = 1;
+double *dataset = new double[datasetSize * 2];
+for (int i = 0; i &amp;lt; allPosVec.size(); ++i)
+{
+dataset[2 * i + 0] = allPosVec[i].x();
+dataset[2 * i + 1] = allPosVec[i].y();
+}
+double *queryset = new double[1 * 2];
+queryset[0] = mousePos.x();
+queryset[1] = mousePos.y();&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;flann::Matrix&amp;lt;double&amp;gt; datasetMat = flann::Matrix&amp;lt;double&amp;gt;(dataset, datasetSize, 2);
+flann::Matrix&amp;lt;double&amp;gt; querysetMat = flann::Matrix&amp;lt;double&amp;gt;(queryset, 1, 2);
+
+flann::Index&amp;lt;flann::L2&amp;lt;double&amp;gt; &amp;gt; index(datasetMat, flann::KDTreeIndexParams(4));
+index.buildIndex();
+
+std::vector&amp;lt;int&amp;gt; indices(knn);
+std::vector&amp;lt;double&amp;gt; distance(knn);
+flann::Matrix&amp;lt;int&amp;gt; indicesMat(&amp;amp;indices[0], 1, knn);
+flann::Matrix&amp;lt;double&amp;gt; distsMat(&amp;amp;distance[0], 1, knn);
+iNearest = index.knnSearch(querysetMat, indicesMat, distsMat, knn, flann::SearchParams(15));
+
+dstPos.setX(dataset[indices[0] * 2 + 0]);
+dstPos.setY(dataset[indices[0] * 2 + 1]);
+delete[] dataset;
+delete[] queryset;&lt;/code&gt;&lt;/pre&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

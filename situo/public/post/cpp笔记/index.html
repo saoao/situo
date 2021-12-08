@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> - 司拓的博客</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Situo" />
+  <meta name="description" content="指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<link rel="canonical" href="http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的">
+
+<meta itemprop="wordCount" content="4699">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">司拓的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/post/">全部文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/about/">关于</a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      司拓的博客
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/post/">全部文章</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://saoao.github.io/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+      
+      <div class="post-meta">
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
+        </time>
+        
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#当类中只有一种函数存在的情况">若const对象想调用非const成员函数，同理进行强制类型转换const_cast &lt; Student&amp;&gt;(constObj).getAge();(注意constObj一定要加括号)
+当类中只有一种函数存在的情况</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>指针：
+1、绝不要对未初始化的指针解除引用。
+2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的长度。
+3、可以将指针与整数相加，加1的结果等于原来的地址加上指向对象占用的总字节数。还可以减1。
+4、可以将一个指针减去另一个指针，获取两个指针的差，要求两个指针指向同一个数组。
+5、采用静态联编，数组的长度在编译时设置；采用动态数组，用new运算符，数组的长度将在运行时设置，即分配空间，使用完这个数组后应使用delete [] 指针名 释放其占用的内存。</p>
+<p>6、使用方括号数组表示法等同于对指针解除引用</p>
+<p>7、数组名一般表示第一个元素的地址，例外情况：使用sizeof+数组名，表示整个数组的字符长度.</p>
+<p>8、cout&laquo;数组名 表示提供一个字符的地址，则它将从该字符开始打印，直到遇到空字符为止。</p>
+<p>句柄（windows应用程序下的句柄）：
+1、句柄变量是个几字节大小的存储空间，windows不允许在程序里直接访问这些内核对象的内存，而是通过调用windows提供给我们的函数来返回一个句柄，我们再用这个句柄作为执行特定行为的函数的参数去完成对内核对象的操作</p>
+<p>2、内核对象可以在进程间共享，但是同一个内核对象的句柄值在不同进程中不一定相同</p>
+<p>3、句柄值是进程相关的，不同进程能使用相同的句柄值，但是不要指望它们能绝对指向同一个内核对象</p>
+<p>4、句柄地址（稳定）-&gt;记载着对象在内存中的地址-&gt;对象在内存中的地址（不稳定）-&gt;实际对象</p>
+<p>5、程序每次重新启动，系统不能保证分配给这个程序的句柄还是原来的那个句柄</p>
+<p>6、句柄是WINDOWS用来标识被应用程序所建立或使用的对象的唯一整数，WINDOWS使用各种各样的句柄标识诸如应用程序实例，窗口，控制，位图，GDI对象等等</p>
+<p>句柄是用来标识项目的，项目包括：
+　　*.模块(module)
+　　*.任务(task)
+　　*.实例(instance)
+　　*.文件(file)
+　　*.内存块(block of memory)
+　　*.菜单(menu)
+　　*.控件(control)
+　　*.字体(font)
+　　*.资源(resource),包括图标(icon)，光标(cursor)，字符串(string)等
+　　*.GDI对象(GDI object),包括位图(bitmap)，画刷(brush)，元文件（metafile),调色板(palette)，画笔(pen)，区域(region)，以及设备描述表(device context)。</p>
+<p>LPSTR是指向以NULL(‘\0’)结尾的32位ANSI字符串的长指针字符串数据类型</p>
+<p>LPSTR = char*
+LPCSTR = const char*
+LPWSTR = wchar_t*
+LPCWSTR = const wchar_t*
+LPTSTR = char* or wchar_t* depending on _UNICODE
+LPCTSTR = const char* or const wchar_t* depending on _UNICODE</p>
+<p>头文件(.h)：
+写类的声明（包括类里面的成员和方法的声明）、函数原型、#define常数等，但一般来说不写出具体的实现。</p>
+<p>在写头文件时需要注意，在开头和结尾处必须按照如下样式加上预编译语句（如下）：</p>
+<p>#ifndef CIRCLE_H
+#define CIRCLE_H</p>
+<p>//你的代码写在这里</p>
+<p>#endif</p>
+<p>这样做是为了防止重复编译，避免同一个文件被include多次.</p>
+<p>#pragma once 与 #ifndef 解析:</p>
+<p>#pragma once方式不受一些较老版本的编译器支持</p>
+<p>typedef typeName 别名  //此方式可以用别名声明一系列变量，不会创建新的类型，只是建立新名称
+#define 别名 typeName</p>
+<p>函数的重载：允许对多个相关的函数使用相同的名称，这些函数以不同的方式或正对不同的类型执行相同的基本任务。</p>
+<p>不接受任何参数的cin.get()返回输入中的下一个字符。</p>
+<p>cctype头文件中定义的函数：</p>
+<p>isalnum()	如果参数是字母数字，即字母或数字，该函数返回true
+isalpha()	如果参数是字母，该函数返回真
+isblank()	如果参数是空格或水平制表符，该函数返回true
+iscntrl()	如果参数是控制字符，该函数返回true
+isdigit()	如果参数是数字（0～9），该函数返回true
+isgraph()	如果参数是除空格之外的打印字符，该函数返回true
+islower()	如果参数是小写字母，该函数返回true
+isprint()	如果参数是打印字符（包括空格），该函数返回true
+ispunct()	如果参数是标点符号，该函数返回true
+isspace()	如果参数是标准空白字符，如空格、进纸、换行符、回车
+、水平制表符或者垂直制表符，该函数返回true</p>
+<p>isupper()	如果参数是大写字母，该函数返回true
+isxdigit()	如果参数是十六进制的数字，即0～9、a~f、A~F，该函数返回true
+tolower()	如果参数是大写字符，则返回其小写，否则返回该参数
+toupper()	如果参数是小写字母，则返回其大写，否则返回该参数
+/****************************************************************************/
+1.return 语句的作用
+(1) return 从当前的方法中退出,返回到该调用的方法的语句处,继续执行。
+(2) return 返回一个值给调用该方法的语句，返回值的数据类型必须与方法的声明中的返回值的类型一致。
+(3) return后面也可以不带参数，不带参数就是返回空，其实主要目的就是用于想中断函数执行，返回调用函数处。
+2.break语句的作用
+（1）break在循环体内，强行结束循环的执行，也就是结束整个循环过程，不在判断执行循环的条件是否成立，直接转向循环语句下面的语句。
+（2）当break出现在循环体中的switch语句体内时，其作用只是跳出该switch语句体。
+3.continue 语句的作用
+终止本次循环的执行，即跳过当前这次循环中continue语句后尚未执行的语句，接着进行下一次循环条件的判断。</p>
+<p>while (cin.get() != &lsquo;\n&rsquo;)
+continue;<br>
+这个循环体的作用就是清空输入缓冲区，也可以用cin.sync()达到同样的目的。</p>
+<p>const的使用:
+*****<strong><strong><strong><strong><strong><strong><strong><strong>const修饰函数的参数</strong></strong></strong></strong></strong></strong></strong></strong>
+1、用const修饰函数的参数时，只修饰输入参数，不修饰输出参数
+2、用const修饰函数的参数时，当参数是内部数据类型，并按值传递，不需要用const修饰，这种函数本身会产生临时变量用于复制该参数。</p>
+<p>*****<strong><strong><strong><strong><strong><strong><strong><strong>const修饰函数的返回值</strong></strong></strong></strong></strong></strong></strong></strong>
+1、如果返回值是内部数据类型，并按值传递时，不需要用const修饰。
+2、如果返回值是指针类型，那么返回值的内容不能被修改。
+3、如果返回值是引用类型，这种场合比较少，一般出现在重载类的赋值运算符函数中，目的是实现链式表达（a=b=c）。如果用cons修饰，那么返回值的内容不能被修改。</p>
+<p>*****<strong><strong><strong><strong><strong><strong><strong><strong>const修饰函数本身</strong></strong></strong></strong></strong></strong></strong></strong>
+1、const位于函数声明尾部，表示该函数不会修改数据成员。
+2、const成员函数不可以修改对象的数据，不管对象是否具有const性质。
+3、对于采用mutable修饰的数据成员，任何情况都可以修改。</p>
+<p>左值与右值：
+1 .左值可以寻址，而右值不可以。</p>
+<p>2 .左值可以被赋值，右值不可以被赋值，可以用来给左值赋值。</p>
+<p>3 左值可变,右值不可变（仅对基础类型适用，用户自定义类型右值引用可以通过成员函数改变）。
+补充：</p>
+<ol>
+<li>对于自定义的类型，允许调用成员函数修改。且只能被 const reference 指向。
+2） 对于基础类型，右值是不可被修改的(non-modifiable)，也不可被 const, volatile 所修饰(cv-qualitification ignored)</li>
+</ol>
+<p>const函数与非const函数的调用规则</p>
+<p>const对象默认调用const成员函数，非const对象默认调用非const成员函数；</p>
+<p>若非const对象想调用const成员函数，则需要显示的转化，例((constStudent&amp;)obj).getAge();</p>
+<h2 id="当类中只有一种函数存在的情况">若const对象想调用非const成员函数，同理进行强制类型转换const_cast &lt; Student&amp;&gt;(constObj).getAge();(注意constObj一定要加括号)
+当类中只有一种函数存在的情况</h2>
+<p>非const对象可以调用const成员函数或者非const成员函数</p>
+<ul>
+<li>const对象只能调用const成员函数，若直接调用非const成员函数编译器会报错。</li>
+</ul>
+<p>用宏获取结构体中某个元素相对于结构体头的偏移地址：
+#define FIND(struc,e) (size_t)&amp;(((struc*)0)-&gt;e)
+先将0强制转化为struc*类型，这样，它的首地址就是0，因此偏移量就等于e的绝对地址，再将其转换为int型的即可。</p>
+<p>堆与栈
+栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈；
+堆区（heap）： 一般由程序员分配释放， 若程序员不释放会导致内存泄露，程序结束时可能由OS回收，与数据结构的堆不同
+全局区（静态区）（static）：全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域， 未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。 - 程序结束后由系统释放
+文字常量区：常量字符串就是放在这里的。 程序结束后由系统释放
+程序代码区：存放函数体的二进制代码</p>
+<p>虚函数
+作用：用基类指针去调用子类函数，实现多态。 实现方法：虚函数表，在一个有虚函数的类的开头有虚函数指针
+可以通过函数指针强行指向类的第一个指针指向的函数地址，来实现调用，这种方法可以直接调用private函数</p>
+<p>指针和数组名的区别：指针占空间，数组名不占</p>
+<p>指针减法
+会自动除以一个sizeof(当前类型)</p>
+<p>用派生类指针指向基类</p>
+<p>noexcept用法：
+noexcept最有用的地方是用在move constructor和move assignment上，你的move操作如果不是noexcept的，很多情况下即使逻辑上可以move，编译器也会执行copy
+destructor一定用noexcept</p>
+<p>一般我们用基类指针指向派生类，实现多态， 而用派生类指针指向基类是非法的，如果非要这么做，则需使用dynamic_cast
+Derived *d = dynamic_cast&lt;Derived *&gt;( new Base());</p>
+<p>STL使用注意点：
+1、当使用基于连续内存（vector,array,deque）的容器，因为涉及内存的复制移动，优先保存对象的指针 
+2、当使用基于节点内存(list,map,set)的容器，因为不涉及内存的复制移动，优先保存对象
+3、如果需要保存一些机器资源（例如：文件句柄，命名管道，套接字等），优先保存对象的指针
+4、如果保存对象的指针，需要在容器使用完毕后，释放内存
+例子：
+for(auto it=vecA.begin();it!=vecA.end();++it)
+{
+if(NULL!=(*it))
+delete (*it);
+(*it)=NULL;  //将指针设置为NULL，防止误用
+}
+vecA.clear(); //清空整个容器
+5、当使用迭代器删除容器中的元素时，删除完成后需要将迭代器重新指向正确的位置
+6、at()函数具备边界检查功能。
+7、当需要使用数组保存固定个数的数据时，使用array容器，需要两个参数：数据类型和元素个数</p>
+<p>环境变量路径：
+计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment</p>
+<p>函数压栈顺序：
+从右往左</p>
+<p>不要在一个const成员函数中调用non-const成员函数，反之则可以。
+const可被施加在任何作用域类的对象、函数参数、函数返回类型、成员函数本体。
+当const和non-const成员函数具有等价的实现时，令non-const版本调用const避免代码重复。</p>
+<p>C++中new 一个对象的时候加括号和不加括号：
+1、加括号调用没有参数的构造函数，不加括号调用默认构造函数或唯一的构造函数，看需求
+2、C++在new时的初始化的规律可能为：对于有构造函数的类，不论有没有括号，都用构造函数进行初始化；如果没有构造函数，则不加括号的new只分配内存空间，不进行内存的初始化，而加了括号的new会在分配内存的同时初始化为0。</p>
+<p><a href="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5">https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5</a></p>
+<p>C++中结构体与类的区别（struct与class的区别）
+1、默认的继承访问权限：struct是public的，class是private的。（struct B : A）注：究竟是public继承还是private继承，取决于子类而不是基类。
+2、struct作为数据结构的实现体，它默认的数据访问控制是public的，而class作为对象的实现体，它默认的成员变量访问控制是private的。</p>
+<p>C++11的关键字final有两个用途：(1)、禁止虚函数被重写；(2)、禁止基类被继承。
+在派生类中，可以同时使用overried和final。</p>
+<p><a href="https://blog.csdn.net/xdgs_2005/article/details/44249881?utm_medium=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v25-4.nonecase&amp;depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v25-4.nonecase">https://blog.csdn.net/xdgs_2005/article/details/44249881?utm_medium=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v25-4.nonecase&amp;depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task--2~all~first_rank_v2~rank_v25-4.nonecase</a></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Situo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      0001-01-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">算法笔记</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/freecad%E7%A0%94%E7%A9%B6/">
+            <span class="next-text nav-default"></span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:zzj80902030@163.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/saoao" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="http://saoao.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2020 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Situo
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -18,8 +18,7 @@
       
       <guid>http://saoao.github.io/about/</guid>
       
-        <description>&lt;p&gt;不安分的屁民 and 程序员&lt;/p&gt;
-</description>
+        <description>不安分的屁民 and 程序员</description>
       
     </item>
     
@@ -30,173 +29,51 @@
       
       <guid>http://saoao.github.io/post/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</guid>
       
-        <description>&lt;h2 id=&#34;二分查找&#34;&gt;二分查找&lt;/h2&gt;
-&lt;p&gt;二分查找法主要是解决在“一堆数中找出指定的数”这类问题。&lt;/p&gt;
-&lt;p&gt;其中一堆数必须具备的特征：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;存储在数组中&lt;/li&gt;
-&lt;li&gt;有序排列&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;算法思想：&lt;/p&gt;
-&lt;p&gt;在一个包含x的数组内，二分查找通过对范围的跟踪来解决问题。开始时，范围就是整个数组。通过将范围中间的元素与x比较并丢弃一半范围，范围就被缩小。这个过程一直持续，直到在x被发现，或者那个能够包含t的范围已成为空。&lt;/p&gt;
-&lt;p&gt;中间下标值的计算：&lt;/p&gt;
-&lt;p&gt;如果写成(low+high)/2，low+high可能会溢出，从而导致数组访问出错。改进的方法是将计算方式写成如下形式：low+ ( (high-low) &amp;raquo;1)。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;二分查找元素x的下标，如无 return -1&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;binarySearch&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; right, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x)
-{
- &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;nullptr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; right &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; mid;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; right)&lt;span style=&#34;color:#75715e&#34;&gt;//注意是&amp;lt;=，若是&amp;lt;会找不到边界值情况
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; {
-     mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; ((right &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; left) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; a[mid])
-         right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;//[left,mid-1]
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; a[mid])
-         left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;//[mid+1,right]
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
-         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mid;
- }
- &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;二分查找返回x(可能有重复)第一次出现的下标，如无return -1&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;binS_first&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; low, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; high, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x)
-{
- &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (NULL &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; high &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; mid;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (low &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; high)
- {
-     mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; ((high &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; low) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);&lt;span style=&#34;color:#75715e&#34;&gt;//计算中点
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; a[mid])&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;lt;x ,调整起点或者终点
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;         low &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// &amp;gt;=x
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;         high &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid;
- }
- &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (a[low] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; x)
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; low;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们只需找到x重复出现情况下的第一次出现的下标。则我们只需用a[mid]和元素x进行比较，当a[mid]&amp;lt;x时&lt;/p&gt;
-&lt;p&gt;此时待查元素肯定在待查区间的右半部分 显然此时 不包括 mid 所以有 low = mid+1, 若a[mid]&amp;gt;=x时, 因为我&lt;/p&gt;
-&lt;p&gt;们查找的是x第一次出现的位置,我们不关心x最后出现的位置,所以此时high下标为mid,直到 low == high 终止&lt;/p&gt;
-&lt;p&gt;循环，并且比较a[low]是否为x,若是则 找到。&lt;/p&gt;
-&lt;p&gt;总的思路是：&lt;/p&gt;
-&lt;p&gt;把有序序列分成2个序列:[first,mid][mid+1,last) 当 a[mid]&amp;lt;x 时 使用序列[mid + 1,last)&lt;/p&gt;
-&lt;p&gt;当 a[mid]&amp;gt;=x 时 使用序列[first,mid]。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;二分查找返回x(可能有重复)最后一次出现的下标，如无return -1&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;binS_last&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; low, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; high, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x)
-{
- &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (NULL &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; high &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; mid;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (low &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; high)&lt;span style=&#34;color:#75715e&#34;&gt;//**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; {
-     mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; low &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; ((high &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; low) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; a[mid])  &lt;span style=&#34;color:#75715e&#34;&gt;// &amp;lt;=x
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;         low &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid;
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// &amp;gt;x
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;         high &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
- }
- &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (a[high] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; x)&lt;span style=&#34;color:#75715e&#34;&gt;//先判断high
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; high;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (a[low] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; x)
-     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; low;
- &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 while中我们假定 low+1 &amp;lt; high,否则在只有两个或者一个元素时 我们只需在while循环之外判断即可。&lt;/p&gt;
-&lt;p&gt;接下来的while 情况和问题2等价。我们现在关心的是 x(可能有重复)最后一次出现的下标，所以现在我们不关心他&lt;/p&gt;
-&lt;p&gt;第一次出现下标的位置, 当 a[mid]&amp;lt;=x 时 low = mid, 否则 a[mid] &amp;gt;x 此时 high = mid -1。&lt;/p&gt;
-&lt;p&gt;二分查找返回x(可能有重复)第一次(最后一次)出现的下标找最小的等号放&amp;gt;=x位置(high),找最大的等号放&amp;lt;=x的位置(low)。
-其中a[mid]在和待查找元素x比较中带 = 的，在对low 或者high赋值时一定为 mid，其它情况(&amp;lt;或&amp;gt;)则为mid+(-)1.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;二分查找返回刚好小于x的元素下标，如无return -1。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;二分查找返回刚好大于x的元素下标。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;返回有序数列某一个元素重复出现的次数。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;时间复杂度：O(log n)&lt;/p&gt;
-&lt;p&gt;#include &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;**lower_bound()：**返回的是被查序列中第一个大于等于查找值的指针；&lt;/p&gt;
-&lt;p&gt;用法：int t=lower_bound(a+l,a+r,m)-a
-解释：在升序排列的a数组内二分查找[l,r)区间内的值为m的元素。返回m在数组中的下标。
-特殊情况：
-1.如果m在区间中没有出现过，那么返回第一个比m大的数的下标。
-2.如果m比所有区间内的数都大，那么返回r。这个时候会越界，小心。
-3.如果区间内有多个相同的m，返回第一个m的下标。
-时间复杂度：
-一次查询O(log n)，n为数组长度。&lt;/p&gt;
-&lt;p&gt;**upper_bound()：**返回的是被查序列中第一个大于查找值得指针；&lt;/p&gt;
-&lt;p&gt;用法：int t=upper_bound(a+l,a+r,m)-a
-解释：在升序排列的a数组内二分查找[l,r)区间内的值为m的元素。返回m在数组中的下标+1。
-特殊情况：
-1.如果m在区间中没有出现过，那么返回第一个比m大的数的下标。
-2.如果m比所有区间内的数都大，那么返回r。这个时候会越界，小心。
-3.如果区间内有多个相同的m，返回最后一个m的下标+1。
-时间复杂度：
-一次查询O(log n)，n为数组长度。&lt;/p&gt;
-&lt;p&gt;二分查找法的缺陷
-二分查找法的O(log n)让它成为十分高效的算法。不过它的缺陷却也是那么明显的。就在它的限定之上：&lt;/p&gt;
-&lt;p&gt;必须有序，我们很难保证我们的数组都是有序的。当然可以在构建数组的时候进行排序，可是又落到了第二个瓶颈上：它必须是数组。&lt;/p&gt;
-&lt;p&gt;数组读取效率是O(1)，可是它的插入和删除某个元素的效率却是O(n)。因而导致构建有序数组变成低效的事情。&lt;/p&gt;
-&lt;p&gt;解决这些缺陷问题更好的方法应该是使用&lt;em&gt;二叉查找树&lt;/em&gt;了，最好自然是自平衡二叉查找树了，自能高效的（O(n log n)）构建有序元素集合，又能如同二分查找法一样快速（O(log n)）的搜寻目标数。&lt;/p&gt;
-&lt;h2 id=&#34;位操作&#34;&gt;位操作&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;右移一位，表示除以2；左移一位，表示乘以2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;交换两个数&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;^=&lt;/span&gt; b;
-b &lt;span style=&#34;color:#f92672&#34;&gt;^=&lt;/span&gt; a;
-a &lt;span style=&#34;color:#f92672&#34;&gt;^=&lt;/span&gt; b;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;判断奇偶数&lt;/p&gt;
-&lt;p&gt;只要根据数的最后一位是 0 还是 1 来决定即可，为 0 就是偶数，为 1 就是奇数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;0==(a&amp;amp;1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;交换符号&lt;/p&gt;
-&lt;p&gt;整数取反加1，正好变成其对应的负数(补码表示)；负数取反加一，则变为其原码，即正数&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;c = ~c + 1;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;求绝对值&lt;/p&gt;
-&lt;p&gt;整数的绝对值是其本身，负数的绝对值正好可以对其进行取反加一求得，即我们首先判断其符号位（整数右移 31 位得到 0，负数右移 31 位得到 -1,即 0xffffffff），然后根据符号进行相应的操作&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a) 
-{
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt;;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; a : (&lt;span style=&#34;color:#f92672&#34;&gt;~&lt;/span&gt;a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;统计二进制中 1 的个数&lt;/p&gt;
-&lt;p&gt;a &amp;amp;= (a-1)  每计算一次，原二进制中的数就少一个1。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;count = 0  
-while(a){  
-  a = a &amp;amp; (a - 1);  
-  count++;  
-}  
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;单链表&#34;&gt;单链表&lt;/h2&gt;
-&lt;p&gt;使用快慢指针找链表的中点：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;首先我们设置两个指针slow和fast，slow指针每次移动一步，fast指针每次移动两步；&lt;/li&gt;
-&lt;li&gt;如果链表中节点个数为偶数时，当快指针无法继续移动时，慢指针刚好指向中点；如果链表中节点个数为奇数时，当快指针走完，慢指针指向中点前一个节点。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+        <description>二分查找 二分查找法主要是解决在“一堆数中找出指定的数”这类问题。 其中一堆数必须具备的特征： 存储在数组中 有序排列 算法思想： 在一个包含x的数组内</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/freecad%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/freecad%E7%A0%94%E7%A9%B6/</guid>
+      
+        <description>FREECAD研究 编译准备 从码云下载最新的源码镜像，地址：https://gitee.com/tinysik/FreeCAD.git free</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>linux学习笔记 查看ip:hostname -I 查看防火墙状态：systemctl status firewalld.service 关闭/开启 开机启动防火墙：systemctl disable/enable firewalld.service 停止防火</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/log4qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/log4qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      
+        <description>log4qt学习笔记</description>
       
     </item>
     

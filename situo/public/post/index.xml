@@ -16,5 +16,41 @@
       <description>二分查找 二分查找法主要是解决在“一堆数中找出指定的数”这类问题。 其中一堆数必须具备的特征： 存储在数组中 有序排列 算法思想： 在一个包含x的数组内</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/cpp%E7%AC%94%E8%AE%B0/</guid>
+      <description>指针： 1、绝不要对未初始化的指针解除引用。 2、在多数情况下，数组名为第一个元素的地址，一种例外：将sizeof用于数组名时，将返回整个数组的</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/freecad%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/freecad%E7%A0%94%E7%A9%B6/</guid>
+      <description>FREECAD研究 编译准备 从码云下载最新的源码镜像，地址：https://gitee.com/tinysik/FreeCAD.git free</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>linux学习笔记 查看ip:hostname -I 查看防火墙状态：systemctl status firewalld.service 关闭/开启 开机启动防火墙：systemctl disable/enable firewalld.service 停止防火</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://saoao.github.io/post/log4qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://saoao.github.io/post/log4qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>log4qt学习笔记</description>
+    </item>
+    
   </channel>
 </rss>

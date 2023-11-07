@@ -1,0 +1,59 @@
+baseurl: "https://saoao.github.io"
+relativeurls: true
+languageCode: "en-us"
+title: "Situo| 司拓"
+theme: "hugo-lithium-theme"
+googleAnalytics: ""
+disqusShortname: "Situo-io"
+ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage: true
+enableEmoji: true
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  cn: "/cn/:year/:month/:slug/"
+  en: "/en/:year/:month/:slug/"
+
+menu:
+  main:
+    - name: "博客"
+      url: "/cn/"
+      weight: 1
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 0
+
+
+params:
+  description: "Description of your website."
+  disqusURL: "https://saoao.github.io"
+  fullURL: "https://saoao.github.io"
+  customCSS: ["css/custom.css"]
+  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
+  githubContentURL: "https://github.com/saoao/"
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion: "9.9.0"
+  highlightjsLang: ["r", "yaml", "tex"]
+  highlightjsTheme: "github"
+
+  social:
+    github: "saoao"
+
+  logo:
+    url: "logo.png"
+    width: 50
+    height: 50
+    alt: "Situo"
+
+  author:
+    en: "Situo"
+    cn: "司拓"
+
+  lang:
+    edit:
+      en: "Suggest an edit of this page"
+      cn: "编辑本页"
+
+blackfriday:
+    extensionsmask: ["noIntraEmphasis"]

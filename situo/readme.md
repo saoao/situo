@@ -1,3 +1,3 @@
-# blogdown-demo
+发布命令：
 
-A minimal website example based on **blogdown** to demonstrate R Markdown features such as citations, HTML widgets, and so on.
+E:\situo\hugo\hugo.exe -b / -D -F -d "public"
